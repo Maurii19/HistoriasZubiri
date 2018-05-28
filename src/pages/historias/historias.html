@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>historias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form [formGroup]="todo" (ngSubmit)="CreateHistoria();" novalidate>
+        <ion-item>
+          <ion-label>Nombre:</ion-label>
+          <ion-input type="text" formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="todo.get('nombre').errors && todo.get('nombre').dirty">
+            <p color="danger" ion-text *ngIf="todo.get('nombre').hasError('minlength')">Cantidad minima de caracteres (2)</p>
+            <p color="danger" ion-text *ngIf="todo.get('nombre').hasError('required')">Campo es requerido</p>
+           
+          </ion-item>
+        <ion-item>
+          <ion-label>Genero:</ion-label>
+          <ion-input type="text" formControlName="genero"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="todo.get('nombre').errors && todo.get('genero').dirty">
+            <p color="danger" ion-text *ngIf="todo.get('genero').hasError('required')">Campo es requerido</p>
+            <p color="danger" ion-text *ngIf="todo.get('genero').hasError('minlength')">Cantidad minima de caracteres (4)</p>
+            <p color="danger" ion-text *ngIf="todo.get('genero').hasError('maxlenght')">Cantidad maxima de caracteres (30)</p>
+          </ion-item>
+        <ion-item>
+            <ion-label>Autor:</ion-label>
+            <ion-input type="text" formControlName="autor"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="todo.get('autor').errors && todo.get('autor').dirty">
+              <p color="danger" ion-text *ngIf="todo.get('autor').hasError('required')">Campo es requerido</p>
+            </ion-item>
+          <ion-item>
+          <ion-label>Historia:</ion-label>
+              <ion-input type="text" formControlName="descrip"></ion-input>
+          </ion-item>
+          <ion-item *ngIf="todo.get('descrip').errors && todo.get('descrip').dirty">
+              <p color="danger" ion-text *ngIf="todo.get('descrip').hasError('required')">Campo es requerido</p>
+            </ion-item>
+        <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
+      </form>
+
+
+</ion-content>
