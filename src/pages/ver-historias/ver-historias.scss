@@ -4,59 +4,44 @@ page-ver-historias {
         background-size:cover;
         background-repeat: no-repeat;
         }
-
-        ion-header {
-            .toolbar {
-              position: absolute;
+    ion-header {
+        .toolbar {
+          position: absolute;
           
-              .toolbar-background {
-                background: transparent;
+        .toolbar-background {
+          background: transparent;
               }
-              .toolbar-title {
-                color: white;
+        .toolbar-title {
+          color: white;
               }
             }
           }
 
-    
   ion-card-content{
     background-color:brown;
     color: white;
   }
 
-
   ion-card {
     position: relative;
     text-align: left;
-    
   }
-
+  
   .autor{
     margin-top: 2%;
     font-weight: bold;
-
   }
   .genero{
     margin-top: 2%;
     font-weight: bold;
-
-
   }
-
   .texto{
     margin-top: 5%;
     color: white;
     
   }
- 
   .tituloHistoria{
     font-family: mifuente;
     color: white;
-    
-     
   }
-
-
-
-    
 }

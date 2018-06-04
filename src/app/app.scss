@@ -8,5 +8,28 @@
 @font-face {
     font-family: trench;
     src: url(../../assets/fonts/trench100free.ttf);
+    
     }
   
+ion-content{
+    background-image: url(../assets/images/menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ion-list, button{
+    background-image: url(../assets/images/menu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: mifuente;
+}
+
+
+ion-header {
+    .toolbar-background {
+        background-repeat: no-repeat;
+    background-size: cover;
+        background-image: url(../assets/images/menu.jpg);
+   
+    }
+  }

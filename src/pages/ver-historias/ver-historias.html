@@ -1,9 +1,3 @@
-<!--
-  Generated template for the VerHistoriasPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -66,6 +60,36 @@
 
 </ion-card>
 
+<ion-card>
+
+  <img src="assets/images/cthulhu.jpg"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      <div class="tituloHistoria">Titulo: La llamada de Cthulhu.</div>
+    </ion-card-title>
+    <div class="autor">
+     Autor: H. P. Lovecraft.
+    </div>
+    <div class="genero">
+      Genero: Terror.
+     </div>
+    <p class="texto">
+      La historia está compuesta por dos narrativas principales vinculadas por una tercera,
+      la voz del «autor». Solo el autor es capaz de interpretar correctamente lo sucedido y es
+      consciente de la importancia de la información que tiene en su poder, y va narrándolo siguiendo
+      el orden en que él mismo fue descubriendo la verdad.Comienza con la muerte de un eminente profesor
+      de la Universidad Brown, Providence, y el estudio de los documentos con los que estaba trabajando.
+      Estos incluyen un informe sobre un ataque perpetrado por una secta. Una investigación sobre los miembros
+      de la secta saca a la luz algunas pistas sobre la horrorosa criatura que veneran, Cthulhu. Este ser,
+      que supuestamente llegó con sus seguidores extraterrestres desde las estrellas millones de años antes 
+      de la aparición del Hombre, ahora descansa en un sueño profundo en su ciudad sumergida, R'lyeh.
+    </p>
+  </ion-card-content>
+
+
+</ion-card>
+
 
 <ion-card>
 
@@ -97,8 +121,9 @@
 
 </ion-card>
 
-<img src="assets/images/generico.jpg"/>
+
 <ion-card *ngFor="let item of ListaHistorias">
+  <img src="assets/images/generico.jpg"/>
   <ion-card-content>
     <ion-card-title >
       <div class="tituloHistoria">Titulo: {{ item.nombre }}.</div>

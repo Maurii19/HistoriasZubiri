@@ -21,6 +21,7 @@ export class VerHistoriasPage {
   }
 
 
+  //Con este metodo obtenemos las historias para visualizarlas en el VerHistorias.html
  getAllHistoria(){
     this.database.getAllHistorias().then((data: any) => {
       console.log(data);
