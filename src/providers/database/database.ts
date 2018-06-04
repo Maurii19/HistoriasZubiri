@@ -13,7 +13,7 @@ export class DatabaseProvider {
       this.storage = new SQLite();
       this.storage.create({ name: "data.db", location:"default" }).then((db: SQLiteObject) => {
         this.db = db;
-        db.executeSql("CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, genero TEXT, autor text, descrip text)", []);
+        db.executeSql("CREATE TABLE IF NOT EXISTS historiasT (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre TEXT, genero TEXT, autor text, descrip text)", []);
         this.isOpen = true;
       }).catch((error) => {
         console.log(error);
@@ -25,7 +25,7 @@ export class DatabaseProvider {
     CrearHistorias(nombre: string, genero: string, autor:string, descrip: string) {
       return new Promise ((resolve, reject) => {
         //VARIABLE CON SENTENCIA SQL
-        let sql = "INSERT INTO history (nombre, genero, autor, descrip) VALUES (?, ?, ?, ?)";
+        let sql = "INSERT INTO historiasT (nombre, genero, autor, descrip) VALUES (?, ?, ?, ?)";
         //EJECUTA LA SENTENCIA CON LOS PARAMETROS RECIBIDOS
         this.db.executeSql(sql, [nombre, genero, autor, descrip]).then((data) => {
           resolve(data);
@@ -37,7 +37,7 @@ export class DatabaseProvider {
     //FUNCION QUE NOS DEVUELVE LAS HISTORIAS QUE ESTAN EN LA BASE DE DATOS
     getAllHistorias() {
       return new Promise ((resolve, reject) => {
-        this.db.executeSql("SELECT * FROM history", []).then((data) => {
+        this.db.executeSql("SELECT * FROM historiasT", []).then((data) => {
           let arrayHistorias = [];
           if (data.rows.length > 0) {
             for (var i = 0; i < data.rows.length; i++) {
@@ -56,6 +56,9 @@ export class DatabaseProvider {
         })
       })
     }
+
+
+
   }
 
 

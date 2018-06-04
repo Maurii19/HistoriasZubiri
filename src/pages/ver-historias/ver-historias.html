@@ -1,0 +1,121 @@
+<!--
+  Generated template for the VerHistoriasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="cards-bg">
+<ion-card>
+
+  <img src="assets/images/elresplandor.jpg"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      <div class="tituloHistoria">Titulo: El Resplandor.</div>
+    </ion-card-title>
+    <div class="autor">
+     Autor: Stephen King.
+    </div>
+    <div class="genero">
+      Genero: Terror.
+     </div>
+    <p class="texto">
+      Al escritor Jack Torrance le es ofrecido un empleo como cuidador del hotel
+      Overlook durante el invierno junto a su familia. Este trabajo parece ser 
+      una oportunidad perfecta para demostrar que está totalmente curado de su alcoholismo.
+      El hotel está situado en lo alto de las montañas de Colorado y el
+      pueblo más cercano es Sidewinder, aproximadamente a 65 kilómetros del lugar.
+      Los caminos son intransitables por el invierno, por lo que el lugar está prácticamente
+      aislado del mundo, especialmente durante las fuertes tormentas.
+    </p>
+  </ion-card-content>
+
+
+</ion-card>
+
+<ion-card>
+
+  <img src="assets/images/gatonegro.jpg"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      <div class="tituloHistoria">Titulo: El gato negro.</div>
+    </ion-card-title>
+    <div class="autor">
+     Autor: Edgar Allan Poe.
+    </div>
+    <div class="genero">
+      Genero: Horror, Narrativa Gotica.
+     </div>
+    <p class="texto">
+      Un joven matrimonio lleva una vida hogareña, 
+      apacible con su gato, hasta que el joven empieza a dejarse arrastrar por la bebida.
+      El alcohol lo vuelve irascible y en uno de sus accesos de furia acaba con la vida del animal.
+      Un segundo gato aparece en escena, la situación familiar empeora,
+      y los acontecimientos se precipitan hasta culminar en un horrendo desenlace.
+    </p>
+  </ion-card-content>
+
+
+</ion-card>
+
+
+<ion-card>
+
+  <img src="assets/images/corazondelator.jpg"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      <div class="tituloHistoria">Titulo: El corazón delator.</div>
+    </ion-card-title>
+    <div class="autor">
+     Autor: Edgar Allan Poe.
+    </div>
+    <div class="genero">
+      Genero: Terror, Ficción Gótica.
+     </div>
+    <p class="texto">
+      El cuento es relatado por un narrador que insiste desde el primer momento en que es una persona normal,
+      aunque sus sentidos son muy agudos. El anciano con el que él suele vivir tiene unos ojos nublados y 
+      azulados, como si fueran ojos de buitres. Esto causa una gran ansiedad al narrador que llega al punto
+      de querer matarlo. Un día que descubre el ojo del anciano abierto, se decide y lo asfixia con su propia almohada.
+      Después corta el cadáver y lo esconde bajo la tarima del suelo, y borra todas las huellas para que no 
+      encuentren pruebas de que él lo mató. La policía acude a inspeccionar la casa porque uno de los vecinos
+      dice que ha escuchado ruidos. El asesino los invita, tranquilo, les enseña la casa y los conduce al cuarto
+      donde está el cadáver desmembrado. Pronto le parece escuchar un ruido que va creciendo. Al pensar horrorizado 
+      que es el corazón del viejo que lo está delatando, se derrumba y confiesa, pidiendo a voces a los policías que levanten las tablas del suelo.
+    </p>
+  </ion-card-content>
+
+
+</ion-card>
+
+<img src="assets/images/generico.jpg"/>
+<ion-card *ngFor="let item of ListaHistorias">
+  <ion-card-content>
+    <ion-card-title >
+      <div class="tituloHistoria">Titulo: {{ item.nombre }}.</div>
+    </ion-card-title>
+    <div class="autor">
+     Autor: {{ item.autor }}.
+    </div>
+    <div class="genero">
+      Genero: {{ item.genero }}.
+     </div>
+    <p class="texto">
+      {{ item.descrip }}
+    </p>
+
+
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { DatabaseProvider } from '../../providers/database/database';
+import { NavController, ToastController } from 'ionic-angular';
+
+
 
 @Component({
   selector: 'page-home',
@@ -10,18 +11,10 @@ export class HomePage {
 
   private ListaHistorias : any;
   
-  constructor(public navCtrl: NavController, private database: DatabaseProvider) {
+  constructor(
+    public navCtrl: NavController,) {
 
   }
 
-
-  getAllHistoria(){
-    this.database.getAllHistorias().then((data: any) => {
-      console.log(data);
-      this.ListaHistorias = data;
-    }, (error) => {
-      console.log(error);
-    })
-  }
 
 }

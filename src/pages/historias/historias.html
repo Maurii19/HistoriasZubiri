@@ -1,17 +1,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>historias</ion-title>
+ <br>
+    <ion-title>Crea tu historia</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
     <form [formGroup]="todo" (ngSubmit)="CreateHistoria();" novalidate>
         <ion-item>
-          <ion-label>Nombre:</ion-label>
+          <ion-label fixed>Nombre:</ion-label>
           <ion-input type="text" formControlName="nombre"></ion-input>
         </ion-item>
         <ion-item *ngIf="todo.get('nombre').errors && todo.get('nombre').dirty">
@@ -20,7 +20,7 @@
            
           </ion-item>
         <ion-item>
-          <ion-label>Genero:</ion-label>
+          <ion-label fixed>Genero:</ion-label>
           <ion-input type="text" formControlName="genero"></ion-input>
         </ion-item>
         <ion-item *ngIf="todo.get('nombre').errors && todo.get('genero').dirty">
@@ -29,21 +29,19 @@
             <p color="danger" ion-text *ngIf="todo.get('genero').hasError('maxlenght')">Cantidad maxima de caracteres (30)</p>
           </ion-item>
         <ion-item>
-            <ion-label>Autor:</ion-label>
+            <ion-label fixed>Autor:</ion-label>
             <ion-input type="text" formControlName="autor"></ion-input>
           </ion-item>
           <ion-item *ngIf="todo.get('autor').errors && todo.get('autor').dirty">
               <p color="danger" ion-text *ngIf="todo.get('autor').hasError('required')">Campo es requerido</p>
             </ion-item>
           <ion-item>
-          <ion-label>Historia:</ion-label>
+          <ion-label fixed>Historia:</ion-label>
               <ion-input type="text" formControlName="descrip"></ion-input>
           </ion-item>
           <ion-item *ngIf="todo.get('descrip').errors && todo.get('descrip').dirty">
               <p color="danger" ion-text *ngIf="todo.get('descrip').hasError('required')">Campo es requerido</p>
             </ion-item>
-        <button ion-button type="submit" [disabled]="!todo.valid">Submit</button>
-      </form>
-
-
+            <button ion-button block type="submit" color="dark" [disabled]="!todo.valid">Crear Historia</button>
+          </form>
 </ion-content>

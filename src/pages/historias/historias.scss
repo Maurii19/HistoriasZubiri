@@ -1,3 +1,27 @@
 page-historias {
+    ion-content{
+        background-image:url('../assets/images/crearhistoria.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;
+        }
 
-}
+        form {
+            margin-top: 13%;
+        }
+        ion-header {
+              .toolbar-background {
+                background: transparent;
+              }
+              .toolbar-title 
+              {
+                color: brown;
+                font-weight: bold;
+                text-align: center;
+                font-size: 30px;
+                
+              }
+            }
+          }
+
+  
+
